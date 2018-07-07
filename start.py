@@ -26,6 +26,8 @@ if lcdIsOperational:  # Clear display and show greeting, pause 1 sec
     lcd.clear()
     lcd.backlight(lcd.ON)
     lcd.message("Welcome to your\ndoorbell")
+else:
+    print("LCD is not operational")
 
 
 def internet_on():

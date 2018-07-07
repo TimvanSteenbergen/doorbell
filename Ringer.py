@@ -37,9 +37,10 @@ class FamilyOrFriend(Ringer):
     def respond(self):
         super(FamilyOrFriend, self).respond() # Works fine
         mp3sound = "sounds/beep-01.mp3" # Works fine
-        call(["omxplayer",mp3sound, "-o", "local"]) # Works fine
+        os.system("aplay -D plughw:CARD=Device_1,DEV=0 mp3sound") #as alternative to omxplayer 
+#        call(["omxplayer",mp3sound, "-o", "alsa"]) # Works fine
         sendmail()  # Works fine.
-        tweet()  # Works fine.
+#        tweet()  # Works fine.
 # Todo2 make this work, Ekiga.net (and Twinkle) and the phone-app of linphone
         os.system("./call.sh") # does not work. Fails to connect to the phone
 
@@ -55,11 +56,11 @@ class Deliverer(Ringer):
     def respond(self):
         super(Deliverer, self).respond()
         mp3sound = "sounds/beep-03.mp3"
-        call(["omxplayer",mp3sound, "-o", "local"])
+        call(["omxplayer",mp3sound, "-o", "alsa"])
 
 
 class HansOrGrietje(Ringer):
     def respond(self):
         super(HansOrGrietje, self).respond()
         mp3sound = "sounds/knibbelknabbelknuisje.amr"
-        call(["omxplayer",mp3sound, "-o", "local"])
+        call(["omxplayer",mp3sound, "-o", "alsa"])

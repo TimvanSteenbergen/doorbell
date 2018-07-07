@@ -8,7 +8,7 @@ from oauth2client.client import flow_from_clientsecrets
 from oauth2client.file import Storage
 from oauth2client.tools import run
 
-EMAIL = "in06khattab@gmail.com"  # change this
+EMAIL = "timvans@gmail.com"  # change this
 
 # Path to the client_secret.json file downloaded from the Developer Console
 CLIENT_SECRET_FILE = '/usr/share/adafruit/webide/repositories/my-pi-projects/Doorbell/client_secret_935106472194-ntvvnbqtgcpnd2qu7akrk6g8tu225br4.apps.googleusercontent.com.json'
