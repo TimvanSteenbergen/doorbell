@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QTextEdit, QWidget, QDialog, QApplication
 import qtScreendesign.uibuttons as ui
 
 
-class MainWindow(QDialog, ui):
+class MainWindow(QDialog):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)

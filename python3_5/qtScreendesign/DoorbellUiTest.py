@@ -15,7 +15,7 @@ class Life2Coding(QDialog):
         self.pushButton.clicked.connect(self.on_pushButton_clicked)
     @pyqtSlot()
     def on_pushButton_clicked(self):
-        self.message('DingDong')
+        self.pushButton.cursor()#Dummy function
         
 app=QApplication(sys.argv)
 widget=Life2Coding()
