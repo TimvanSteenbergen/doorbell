@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="a">
+    <file>ancient.jpg</file>
+  </qresource>
+  <qresource prefix="b">
+    <file>ancient2.jpg</file>
+  </qresource>
+</RCC>
