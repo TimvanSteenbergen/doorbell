@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="bellimages">
+    <file>roundGould.jpg</file>
+  </qresource>
+</RCC>
