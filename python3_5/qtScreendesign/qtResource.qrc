@@ -2,4 +2,7 @@
   <qresource prefix="bellimages">
     <file>roundGould.jpg</file>
   </qresource>
+  <qresource prefix="bmps">
+    <file>beldan.bmp</file>
+  </qresource>
 </RCC>

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import Tkinter as tk 
+import tkinter as tk 
 import urllib2
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 from gpiozero import Button

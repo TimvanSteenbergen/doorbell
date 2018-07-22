@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>240</width>
-    <height>320</height>
+    <width>320</width>
+    <height>240</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,17 +19,27 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>221</width>
-     <height>301</height>
+     <x>0</x>
+     <y>0</y>
+     <width>320</width>
+     <height>240</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Monotype Corsiva</family>
+     <pointsize>48</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background:url(:/ancient1/images/ancient.png)</string>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Ding Dong</string>
    </property>
   </widget>
  </widget>
