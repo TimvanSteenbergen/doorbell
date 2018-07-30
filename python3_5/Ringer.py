@@ -3,6 +3,8 @@ from datetime import datetime
 from time import sleep
 import picamera
 import os
+from gpiozero import LED #for the buttons connected to the GPIO-pins
+
 from send_email_attachment import sendmail
 # from tweet import tweet
 from shutil import copyfile
@@ -13,6 +15,9 @@ globdir = "/home/pi" #homedirectory
 dir_sounds = "%s/doorbell/sounds" % globdir #wav's, mp3's and amr's
 dir_images = "%s/doorbell/images" % globdir #where the pi's desktop images are kept
 dir_camera_images = "%s/Pictures/doorbellcamera" % globdir # photo's and video's taken by the camera
+
+# The wires connected to the Kaku-sender  
+b26kaku = LED(26)
 
 class Ringer(object):
 
@@ -47,12 +52,14 @@ class FamilyOrFriend(Ringer):
     def respond(self):
         print("Family or Friend. This %s is where we are. And %s and %s and %s"
                % (globdir, dir_sounds, dir_images, dir_camera_images))
+        b26kaku.on()
         super(FamilyOrFriend, self).respond() # Works fine
         mp3sound = "%s/he_hallo_is_daar_iemand.wav" % dir_sounds # Works fine
         os.system('aplay -D plughw:CARD=Device_1,DEV=0 %s' % mp3sound) #as alternative to omxplayer 
 #         call(["omxplayer", mp3sound, "-o", "alsa"]) # Works fine
         sendmail()  # Works fine.
 #        tweet()  # Works fine.
+        b26kaku.off()
 # Todo2 make this work, Ekiga.net (and Twinkle) and the phone-app of linphone
         os.system("./call.sh") # does not work. Fails to connect to the phone
         print("EndofFamorFriend")

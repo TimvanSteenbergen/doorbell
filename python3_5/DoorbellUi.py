@@ -12,7 +12,6 @@ class DoorbellButton(QDialog):
     def __init__(self):
         super(DoorbellButton, self).__init__()
         loadUi('DoorbellUi.ui', self)
-#         self.setWindowTitle('Doorbell')
         self.pushButton.clicked.connect(self.on_pushButton_clicked)
     @pyqtSlot()
     def on_pushButton_clicked(self):
